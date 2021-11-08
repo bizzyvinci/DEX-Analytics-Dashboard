@@ -152,7 +152,7 @@ const PoolPage = () => {
 				[`${data.token_1.contract_ticker_symbol}/${data.token_0.contract_ticker_symbol}`, 'token_1_prices']
 			]
 
-			console.log(data, buttonOptions);
+			//console.log(data, buttonOptions);
 			return [data, buttonOptions];
 		}
 

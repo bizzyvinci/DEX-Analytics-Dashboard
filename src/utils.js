@@ -18,15 +18,11 @@ export const dayFormatter = (str) => {
 }
 
 export const numFormatter = (num, digits=2) => {
-	if (num === 0) {
-		return '0'
+	if (num <= 1) {
+		return num.toString()
 	}
 	const suffixes = ['', 'k', 'm', 'B', 'T'];
 	const tier = Math.floor(Math.log10(num) / 3);
-	if (tier<0) {
-		const suffix = '^' + tier*3
-		return (num * 10^(tier*-3)).toFixed(digits)
-	}
 	const suffix = suffixes[tier];
 	const scaled = Math.pow(10, tier*3);
 	return (num/scaled).toFixed(digits) + suffix;

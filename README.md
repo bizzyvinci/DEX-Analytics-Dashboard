@@ -21,7 +21,12 @@ The pages are where api is fetched and the data is processed for the visualizati
 
 The dashboard contains all visualizations that are currently used by DEXes and more. Happy building and I'm an issue away.
 
+
+## Bad news
+Every component and page is working now **but** some of my data aggregation seems wrong, as well as some bizarre results from the API.
+
+
 ### A few notes for Covalent team
-* API is slow sometimes.
+* API is slow sometimes. (Ok, I think it's too damn slow). And it breaks sometimes, a few times.
 * There's usually spike in 30d chart data for this [ecosystem endpoint](https://api.covalenthq.com/v1/{chain_id}/xy=k/{dexname}/ecosystem/). It is a common error among all DEXes but it disappears sometimes. Also, I noticed that such spikes are not in 7d chart datas.
 * Allow parameters such as page, offset, limit and sort for some of the endpoints.

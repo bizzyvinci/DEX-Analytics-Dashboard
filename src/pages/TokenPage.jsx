@@ -183,10 +183,10 @@ const TokenPage = () => {
 				token: token_result[0].token_0.contract_ticker_symbol,
 				pools: pools,
 				liquidity: Object.entries(liquidity).map(([key, value]) => ({'date': key, 'value': value})),
-				//volume: volume,
-				//swaps: swaps,
-				//price: price,
-				//meta: meta,
+				volume: Object.entries(volume).map(([key, value]) => ({'date': key, 'value': value})),
+				swaps: Object.entries(swaps).map(([key, value]) => ({'date': key, 'value': value})),
+				price: Object.entries(price).map(([key, value]) => ({'date': key, 'value': value})),
+				meta: meta,
 				transactions: swap_transactions.concat(
 					add_transactions).concat(remove_transactions).sort(
 					(a,b) => (b.time - a.time))
@@ -241,7 +241,7 @@ const TokenPage = () => {
 					<h3>Pools</h3>
 				</RowDiv>
 				<RowDiv>
-					{data.pools && <Table data={data.transactions} columns={poolColumns}/>}
+					{data.pools && <Table data={data.pools} columns={poolColumns}/>}
 				</RowDiv>
 			</Div>
 		</>
