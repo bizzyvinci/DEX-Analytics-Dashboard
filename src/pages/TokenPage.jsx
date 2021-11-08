@@ -24,7 +24,9 @@ const RowDiv = styled.div`
 		display: block;
 		align-items: center;
 	}
-	
+	h3 {
+		justify-content: center;
+	}
 `;
 
 
@@ -178,6 +180,7 @@ const TokenPage = () => {
 			}))
 			
 			const data = {
+				token: token_result[0].token_0.contract_ticker_symbol,
 				pools: pools,
 				liquidity: Object.entries(liquidity).map(([key, value]) => ({'date': key, 'value': value})),
 				//volume: volume,
@@ -215,6 +218,13 @@ const TokenPage = () => {
 		<>
 			<Div>
 				<RowDiv>
+					{data.token &&
+						<h3>
+							{`${data.token} Analytics`}
+						</h3>
+					}
+				</RowDiv>
+				<RowDiv>
 					<Info data={data.meta} title='Metadata' width='30%' height='360px' hugeFont={false} />
 					<div className='chart'>
 						<ButtonGroup options={buttonOptions} selected={selectedChart} setSelected={setSelectedChart} />
@@ -222,7 +232,13 @@ const TokenPage = () => {
 					</div>
 				</RowDiv>
 				<RowDiv>
+					<h3>Transactions</h3>
+				</RowDiv>
+				<RowDiv>
 					{data.transactions && <Table data={data.transactions} columns={transactionColumns}/>}
+				</RowDiv>
+				<RowDiv>
+					<h3>Pools</h3>
 				</RowDiv>
 				<RowDiv>
 					{data.pools && <Table data={data.transactions} columns={poolColumns}/>}

@@ -9,8 +9,19 @@ This is a dashboard template for analyzing data of DEcentralized eXchages using 
 You might also want to change the `Config` in src/utils.py. Available dexname can be found [here](https://www.covalenthq.com/docs/learn/guides/configure/uniswap-clone#introduction) and you can check the chain_id [here](https://www.covalenthq.com/docs/networks#indexed-networks). Also make sure to use the correct `explorer` for your network.
 
 
+## Structure
+The project is built with react components which are extensions of what is provided by `recharts` and `react-table` libraries. They are easy to style with css or `styled-components`. The building components are:
+* AreaChart
+* BarChart
+* ButtonGroup
+* Info
+* Table
 
-#### A few notes for Covalent team
+The pages are where api is fetched and the data is processed for the visualization components. This is a [**demo video**](https://youtu.be/gg2Gx-YBUZo) to see the components and pages.
+
+The dashboard contains all visualizations that are currently used by DEXes and more. Happy building and I'm an issue away.
+
+### A few notes for Covalent team
 * API is slow sometimes.
 * There's usually spike in 30d chart data for this [ecosystem endpoint](https://api.covalenthq.com/v1/{chain_id}/xy=k/{dexname}/ecosystem/). It is a common error among all DEXes but it disappears sometimes. Also, I noticed that such spikes are not in 7d chart datas.
 * Allow parameters such as page, offset, limit and sort for some of the endpoints.

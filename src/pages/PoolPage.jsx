@@ -23,7 +23,10 @@ const RowDiv = styled.div`
 		display: block;
 		align-items: center;
 	}
-	
+	h3 {
+		display: block;
+		justify-content: center;
+	}
 `;
 
 
@@ -170,11 +173,21 @@ const PoolPage = () => {
 		<>
 			<Div>
 				<RowDiv>
+					{data.token_0 &&
+						<h3>
+							{`${data.token_0.contract_ticker_symbol}/${data.token_1.contract_ticker_symbol} Analytics`}
+						</h3>
+					}
+				</RowDiv>
+				<RowDiv>
 					<Info data={data.meta} title='Metadata' width='30%' height='360px' hugeFont={false} />
 					<div className='chart'>
 						<ButtonGroup options={buttonOptions} selected={selectedChart} setSelected={setSelectedChart} />
 						{charts[selectedChart]}
 					</div>
+				</RowDiv>
+				<RowDiv>
+					<h3>Transactions</h3>
 				</RowDiv>
 				<RowDiv>
 					{data.transactions && <Table data={data.transactions} columns={columns}/>}
