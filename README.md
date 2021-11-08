@@ -9,6 +9,11 @@ This is a dashboard template for analyzing data of DEcentralized eXchages using 
 You might also want to change the `Config` in src/utils.py. Available dexname can be found [here](https://www.covalenthq.com/docs/learn/guides/configure/uniswap-clone#introduction) and you can check the chain_id [here](https://www.covalenthq.com/docs/networks#indexed-networks). Also make sure to use the correct `explorer` for your network.
 
 
+If you see the following error message on the hosted dashboard. Kindly refresh the page a couple of times. I'll look into it and probably upgrade soon.
+
+<img src='https://i.stack.imgur.com/ZDBwR.png' alt='nothing here yet error' width='500px' style='text-align: center;' />
+
+
 ## Structure
 The project is built with react components which are extensions of what is provided by `recharts` and `react-table` libraries. They are easy to style with css or `styled-components`. The building components are:
 * AreaChart
