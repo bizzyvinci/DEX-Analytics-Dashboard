@@ -1,6 +1,6 @@
 # DEX ANALYTICS TEMPLATE FOR COVALENT API
 
-This is a template for analyzing data of DEcentralized eXchages using [covalent's api](https://www.covalenthq.com/docs/learn/guides/configure/uniswap-clone). It is hosted on Heroku and can be run locally in 3 steps:
+This is a dashboard template for analyzing data of DEcentralized eXchages using [covalent's api](https://www.covalenthq.com/docs/learn/guides/configure/uniswap-clone). It is hosted on [Heroku](https://dex-analytics.herokuapp.com/) and can be run locally in 3 steps:
 
 1. Add your covalent api key to environment variable as `REACT_APP_CKEY`
 1. Install required dependencies
