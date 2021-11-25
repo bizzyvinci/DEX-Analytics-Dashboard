@@ -24,14 +24,18 @@ The project is built with react components which are extensions of what is provi
 
 The pages are where api is fetched and the data is processed for the visualization components. This is a [**demo video**](https://youtu.be/gg2Gx-YBUZo) to see the components and pages.
 
-The dashboard contains all visualizations that are currently used by DEXes and more. Happy building and I'm an issue away.
+The dashboard contains all visualizations that are currently used by DEXes and more.
 
 
 ## Bad news
 Every component and page is working now **but** some of my data aggregation seems wrong, as well as some bizarre results from the API.
 
 
-### A few notes for Covalent team
+## Other resources
+This repository is for a [gitcoin contest](https://gitcoin.co/issue/covalenthq/covalent-gitcoin-bounties/6/100026821) and you should also take look at the [1st place](https://github.com/SabeloMkhwanzi/dex-dashboard-covalent-dapp) and [2nd place](https://github.com/DTIV/DexDash). Happy buidling.
+
+
+## A few notes for Covalent team
 * API is slow sometimes. (Ok, I think it's too damn slow). And it breaks sometimes, a few times.
-* There's usually spike in 30d chart data for this [ecosystem endpoint](https://api.covalenthq.com/v1/{chain_id}/xy=k/{dexname}/ecosystem/). It is a common error among all DEXes but it disappears sometimes. Also, I noticed that such spikes are not in 7d chart datas.
+* There's usually spike in 30d chart data for this ecosystem endpoint (`https://api.covalenthq.com/v1/{chain_id}/xy=k/{dexname}/ecosystem/`). It is a common error among all DEXes but it disappears sometimes. Also, I noticed that such spikes are not in 7d chart data.
 * Allow parameters such as page, offset, limit and sort for some of the endpoints.
